@@ -30,7 +30,7 @@ pipeline {
         }
 		stage('Docker Build') {
       steps {
-				sudo sh 'docker build -t jasdhir/employee-rest:latest .'
+				sudo sh "docker build -t jasdhir/employee-rest:latest ."
       }
     }
     }
