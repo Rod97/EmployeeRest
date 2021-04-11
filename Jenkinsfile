@@ -10,7 +10,8 @@ pipeline {
           }
         stage('Build') {
             steps {
-                       sh 'mvnw clean package'
+                         sh 'chmod a+x mvnw'
+                      sh './mvnw clean package'
             }
 
           post {
