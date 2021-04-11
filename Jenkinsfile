@@ -5,7 +5,7 @@ pipeline {
           stage('Checkout') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/jasdhir/spring-petclinic.git'
+                git 'https://github.com/jasdhir/EmployeeREST.git'
             }
           }
         stage('Build') {
@@ -17,7 +17,7 @@ pipeline {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
                 always {
-                  //  junit '*target/surefire-reports/TEST-*.xml'
+                    junit '*target/surefire-reports/TEST-*.xml'
                     archiveArtifacts 'target/*.jar'
               //  }
 				//changed{
