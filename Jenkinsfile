@@ -27,6 +27,12 @@ pipeline {
 				}
             }
         }
+		stage('Docker Build') {
+      agent any
+      steps {
+				sudo sh 'docker build -t jasdhir/employee-rest:latest .'
+      }
+    }
     }
 }
 
