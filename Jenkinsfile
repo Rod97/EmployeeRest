@@ -28,7 +28,11 @@ pipeline {
 				}
             }
         }
-		
+		stage('DockerBuild') {
+      steps {
+				sudo sh "docker build -t jasdhir/employee-rest:latest ."
+      }
+    }
     }
 }
 
