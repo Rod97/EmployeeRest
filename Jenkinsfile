@@ -5,7 +5,7 @@ pipeline {
     stage('Checkout') {
       steps {
         // Get some code from a GitHub repository
-        git 'https://github.com/jasdhir/EmployeeREST.git'
+        git 'https://github.com/Rod97/EmployeeREST.git'
       }
     }
         stage('Build') {
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('DockerBuild') {
       steps {
-        sh 'docker build -t jasdhir/employee-rest:latest .'
+        sh 'docker build -t Rod97/employee-rest:latest .'
       }
         }
   }
